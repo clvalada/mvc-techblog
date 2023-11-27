@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const postRoutes = require('./routes/postRoutes');
+const postRoutes = require('./routes/postroutes');
 
 // Use the postRoutes in your app
 app.use('/api', postRoutes);
