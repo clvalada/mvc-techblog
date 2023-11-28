@@ -2,7 +2,7 @@
 
 ## Description 
 
-MVC TechBlog is a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well. This site is built completely from scratch and deployed to Heroku. It follows the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
+MVC TechBlog is a work in progress. Upon completion, it will be a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well. This site is built completely from scratch and deployed to Heroku. It follows the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![License: MIT](https://img.shields.io/badge/Version-1.0-yellow.svg)
