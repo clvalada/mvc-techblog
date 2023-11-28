@@ -5,9 +5,7 @@ const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const dotenv = require('dotenv');
 const sequelize = require('./database');
-
-// Import the Post model and init function
-const { Post, initPostModel } = require('./models/Post');
+const Post = require('./models/Post');
 
 dotenv.config();
 
@@ -30,8 +28,10 @@ app.use(
   })
 );
 
-// Initialize the Post model using the init function
-initPostModel();
+// Sync the Sequelize models with the database
+sequelize.sync({ force: false }).then(() => {
+  console.log('Database synced');
+});
 
 // Set up routes and controllers
 app.use(require('./routes/postroutes'));
