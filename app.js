@@ -39,6 +39,10 @@ sequelize.sync({ force: false }).then(() => {
 
 // Set up routes and controllers
 app.use(require('./routes/postroutes'));
+app.use('/', require('./routes/homeRoute'));
+app.use('/', require('./routes/signup'));
+app.use('/', require('./routes/login'));
+app.use('/', require('./routes/logout'));
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
