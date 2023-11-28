@@ -1,6 +1,7 @@
 // Post.js
 const { DataTypes } = require('sequelize');
 const sequelize = require('../database');
+const { post } = require('../routes/postroutes');
 
 const Post = sequelize.define('post', {
   // Define your model attributes here
@@ -14,4 +15,4 @@ const Post = sequelize.define('post', {
   },
 });
 
-module.exports = Post;
+module.exports = post;
