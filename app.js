@@ -3,15 +3,10 @@ const exphbs = require('express-handlebars');
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const dotenv = require('dotenv');
-const { sequelize } = require('./models'); 
+const { sequelize } = require('./models');
 
 // Require the Sequelize configuration from database.js
-const sequelizeConfig = require('./database');  
-
-// Use the sequelizeConfig in the SequelizeStore
-store: new SequelizeStore({
-  db: sequelizeConfig,
-}),
+const sequelizeConfig = require('./database');
 
 dotenv.config();
 
@@ -29,7 +24,7 @@ app.use(
     resave: false,
     saveUninitialized: false,
     store: new SequelizeStore({
-      db: sequelize,
+      db: sequelizeConfig, // Use the sequelizeConfig imported from database.js
     }),
   })
 );
@@ -40,3 +35,7 @@ app.use(require('./routes/postroutes'));
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+// Initialize the Post model
+const Post = require('./models/post');
+Post.init(sequelizeConfig);
