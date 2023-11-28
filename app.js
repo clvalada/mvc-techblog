@@ -6,11 +6,15 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const dotenv = require('dotenv');
 const sequelize = require('./database');
 const Post = require('./models/Post');
+const path = require('path');
 
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3003;
+
+// Set the views directory
+app.set('views', path.join(__dirname, 'views'));
 
 // Set up Handlebars as the view engine
 app.engine('handlebars', exphbs.engine());
