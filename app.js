@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 3003;
 app.set('views', path.join(__dirname, 'views'));
 
 // Set up Handlebars as the view engine
-app.engine('handlebars', exphbs.engine({defaultLayout: 'home'}));
+app.engine('handlebars', exphbs.engine({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 // Set up session management

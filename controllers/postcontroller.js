@@ -24,7 +24,7 @@ exports.getHomePage = async (req, res) => {
   try {
     // Logic to fetch posts or other data for the home page
     const posts = await Post.findAll();
-    res.render('views/home.handlebars', { posts });
+    res.render('home', { posts });
   } catch (error) {
     console.error('Error fetching posts:', error);
     res.status(500).send('Internal Server Error');
