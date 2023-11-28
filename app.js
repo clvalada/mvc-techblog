@@ -14,7 +14,7 @@ const app = express();
 const PORT = process.env.PORT || 3003;
 
 // Set the views directory
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views/home.handlebars'));
 
 // Set up Handlebars as the view engine
 app.engine('handlebars', exphbs.engine());
