@@ -35,7 +35,7 @@ app.use(
 );
 
 // Set up routes and controllers
-app.use('/api', require('./routes/postroutes'));
+app.use(require('./routes/postroutes'));
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
