@@ -5,6 +5,9 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const dotenv = require('dotenv');
 const { sequelize } = require('./models'); 
 
+// Require the Sequelize configuration from database.js
+const sequelizeConfig = require('./database');  
+
 dotenv.config();
 
 const app = express();
