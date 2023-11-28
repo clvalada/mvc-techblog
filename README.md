@@ -23,6 +23,7 @@ MVC TechBlog is a CMS-style blog site similar to a Wordpress site, where develop
 - [Licenses](#licenses)
 
 ## Screenshots
+![Animation cycles through signing into the app, clicking on buttons, and updating blog posts.](screenshots/14-mvc-homework-demo-01.gif)
 
 
 ## Usage
