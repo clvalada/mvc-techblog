@@ -1,7 +1,7 @@
 // postcontroller.js
 
 // Import any necessary dependencies or models
-const Post = require('../models/post')
+const Post = require('../models/Post')
 
 // Controller functions
 exports.getAllPosts = async (req, res) => {

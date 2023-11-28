@@ -2,8 +2,8 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../database');
 
-const Post = sequelize.define('post', {
-  // Define your model attributes here
+const Post = sequelize.define('Post', {
+  // Define model attributes here
   title: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -14,4 +14,14 @@ const Post = sequelize.define('post', {
   },
 });
 
-module.exports = Post;
+
+module.exports = {
+  Post,
+  init: () => {
+    // additional initialization logic
+    // if needed in the future
+    return Post.init({
+      /* any additional options */
+    });
+  },
+};
