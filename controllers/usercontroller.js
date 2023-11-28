@@ -1,5 +1,5 @@
 // userController.js
-const { User } = require('../models'); // Import your User model
+const { User } = require('../models'); // Import  User model
 
 // Function to render the signup form
 const renderSignupForm = (req, res) => {
