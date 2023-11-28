@@ -6,6 +6,11 @@ const renderSignupForm = (req, res) => {
   res.render('signup'); 
 };
 
+// Function to render the login form
+const renderLoginForm = (req, res) => {
+    res.render('login'); 
+  };
+
 // Function to handle user signup
 const signup = async (req, res) => {
   try {
@@ -36,4 +41,5 @@ const signup = async (req, res) => {
 module.exports = {
   renderSignupForm,
   signup,
+  renderLoginForm,
 };
