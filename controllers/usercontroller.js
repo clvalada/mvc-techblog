@@ -3,7 +3,7 @@ const { User } = require('../models'); // Import your User model
 
 // Function to render the signup form
 const renderSignupForm = (req, res) => {
-  res.render('signup'); // Assuming you have a signup.handlebars file in your views folder
+  res.render('signup'); 
 };
 
 // Function to handle user signup
@@ -25,7 +25,7 @@ const signup = async (req, res) => {
     // Create a new user
     const newUser = await User.create({ username, password });
 
-    // Your logic to handle successful signup, such as redirecting to the login page
+    // Logic to handle successful signup
     res.redirect('/login');
   } catch (error) {
     console.error('Error during signup:', error);
