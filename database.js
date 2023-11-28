@@ -12,5 +12,8 @@ const sequelize = new Sequelize(
   }
 );
 
+const Post = require('./models/post'); 
+Post.init(sequelize);
+
 module.exports = sequelize;
 
