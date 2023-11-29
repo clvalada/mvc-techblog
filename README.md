@@ -28,6 +28,8 @@ MVC TechBlog is a work in progress. Upon completion, it will be a CMS-style blog
 
 ## Usage
 Simply visit the URL to begin using the site. 
+https://mvc-techblog-clv-a180383a47bd.herokuapp.com/
+
 
 ## Credits
 
